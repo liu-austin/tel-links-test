@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tel Links Test Page</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .test-section h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .phone-icon {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+        }
+        .large-phone-icon {
+            width: 32px;
+            height: 32px;
+            vertical-align: middle;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 10px;
+            display: inline-block;
+            padding: 8px 12px;
+            border: 1px solid #007bff;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        .link-container {
+            margin: 15px 0;
+        }
+        .contact-buttons {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 24px 0 0 0;
+        }
+        .contact-button {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid #d3d6db;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            outline: none;
+            padding: 0;
+        }
+        .contact-button:focus, .contact-button:hover {
+            border-color: #1976d2;
+            box-shadow: 0 0 0 2px #e3f0fd;
+        }
+        .material-icons {
+            font-family: 'Material Icons', 'Arial', sans-serif;
+            font-size: 32px;
+            color: #1976d2;
+            line-height: 1;
+            user-select: none;
+        }
+        .big-blue-phone {
+            text-decoration: none;
+            border: none;
+        }
+        .big-blue-phone:hover, .big-blue-phone:focus {
+            color: #0d47a1;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tel Links Test Page</h1>
+    <p>This page contains various types of telephone links for testing purposes.</p>
+
+    <div class="test-section">
+        <h3>1. Phone Number from Vendasta table view</h3>
+        <div _ngcontent-ng-c159065209="" class="value ng-star-inserted"><a _ngcontent-ng-c159065209="" class="big-blue-phone" href="tel:+13067777777"> +1 306 777 7777 </a></div>
+        <p>Expectations: The Kixie c2c and c2sms icons should be added before the phone number link. Clicking the phone number link should launch Kixie c2c.</p>
+    </div>
+
+    <div class="test-section">
+        <h3>2. Phone Number from Vendasta contact profile view</h3>
+        <div class="contact-buttons">
+            <button mat-icon-button class="contact-button">
+                <span class="material-icons">question_answer</span>
+            </button>
+            <a mat-icon-button class="contact-button" href="tel:+13067777777">
+                <span class="material-icons">phone</span>
+            </a>
+            <a mat-icon-button class="contact-button" href="mailto:jleibel@hello.com">
+                <span class="material-icons">email</span>
+            </a>
+            <button mat-icon-button class="contact-button">
+                <span class="material-icons">more_horiz</span>
+            </button>
+        </div>
+        <p>Expectations:</p>
+        <ul style="margin-top: 16px;">
+            <li>The chat button should not be modified</li>
+            <li>The phone button should launch Kixie c2c</li>
+            <li>The email button should launch the default email app</li>
+            <li>The more_horiz button should not do anything</li>
+        </ul>
+    </div>
+    
+    <div class="test-section">
+        <h3>3. Image Only Link</h3>
+        <div class="link-container">
+            <a href="tel:+15553819127">
+                <svg class="large-phone-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h3>4. Phone Number Display</h3>
+        <div class="link-container">
+            <a href="tel:+15553819127">+1 (555) 381-9127</a>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h3>5. Text Only Link</h3>
+        <div class="link-container">
+            <a href="tel:+15553819127">Call Now</a>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h3>6. Text and Image Combined</h3>
+        <div class="link-container">
+            <a href="tel:+15553819127">
+                <svg class="phone-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
+                </svg>
+                Call +1 (555) 381-9127
+            </a>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h3>7. Additional Test Cases</h3>
+        <div class="link-container">
+            <a href="tel:+15553819127">
+                <svg class="phone-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
+                </svg>
+                Contact Support
+            </a>
+            <a href="tel:+15553819127">📞 Click to Call</a>
+            <a href="tel:+15553819127">phone</a>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h3>8. Different Phone Number Formats</h3>
+        <div class="link-container">
+            <a href="tel:+15553819127">555-381-9127</a>
+            <a href="tel:+15553819127">+1-555-381-9127</a>
+            <a href="tel:+15553819127">(555) 381-9127</a>
+            <a href="tel:+15553819127;ext=123">(555) 381-9127 Ext. 123</a>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h3>9. SMS Links - Image Only</h3>
+        <div class="link-container">
+            <a href="sms:+15553819127">
+                <svg class="large-phone-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M6,9V7H18V9H6M14,11V13H6V11H14M18,15H6V17H18V15Z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h3>10. SMS Links - Phone Number Display</h3>
+        <div class="link-container">
+            <a href="sms:+15553819127">+1 (555) 381-9127</a>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h3>11. SMS Links - Text Only</h3>
+        <div class="link-container">
+            <a href="sms:+15553819127">Send SMS</a>
+            <a href="sms:+15553819127">Text Now</a>
+            <a href="sms:+15553819127">Message</a>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h3>12. SMS Links - Text and Image Combined</h3>
+        <div class="link-container">
+            <a href="sms:+15553819127">
+                <svg class="phone-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M6,9V7H18V9H6M14,11V13H6V11H14M18,15H6V17H18V15Z"/>
+                </svg>
+                Text +1 (555) 381-9127
+            </a>
+            <a href="sms:+15553819127">💬 Send Message</a>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h3>13. SMS Links with Pre-filled Messages</h3>
+        <div class="link-container">
+            <a href="sms:+15553819127?body=Hello%20from%20test%20page">SMS with pre-filled text</a>
+            <a href="sms:+15553819127?body=I%20would%20like%20to%20schedule%20a%20call">
+                <svg class="phone-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M6,9V7H18V9H6M14,11V13H6V11H14M18,15H6V17H18V15Z"/>
+                </svg>
+                Schedule Call Request
+            </a>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h3>14. SMS Links - Different Formats</h3>
+        <div class="link-container">
+            <a href="sms:5553819127">555-381-9127</a>
+            <a href="sms:+1-555-381-9127">+1-555-381-9127</a>
+            <a href="sms:(555)381-9127">(555) 381-9127</a>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h3>15. Phone Numbers as Plain Text (No Links)</h3>
+        <div class="link-container">
+            <p>Contact us at: <strong>+1 (555) 381-9127</strong></p>
+            <p>Support line: <span style="color: #333;">555-381-9127</span></p>
+            <p>Emergency contact: 555.381.9127</p>
+            <p>Call our office: (555) 381-9127 ext. 123</p>
+            <p>International: +1-555-381-9127</p>
+            <div style="border: 1px solid #ccc; padding: 10px; margin: 10px 0; background-color: #f5f5f5;">
+                <h4>Business Hours</h4>
+                <p>Monday - Friday: 9AM - 5PM</p>
+                <p>Phone: <em>555-381-9127</em></p>
+                <p>After hours: +15553819127</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html> 
